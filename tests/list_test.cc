@@ -14,7 +14,7 @@ auto GetTestList() {
   return test_list;
 }
 
-TEST(ListTest, Playground) {
+TEST(ListTest, ListTest) {
   auto test_list = GetTestList();
   EXPECT_EQ(test_list.size(), 3);
 }

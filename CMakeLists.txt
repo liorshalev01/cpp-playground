@@ -1,14 +1,21 @@
 cmake_minimum_required(VERSION 3.25)
 project(playground)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_STANDARD 20)
 
 include(cmake/googletest.cmake)
 
 add_executable(
+  playground
+  src/main.cc)
+
+add_executable(
   playground_test
-  src/list_test.cc)
+  tests/class_test.cc
+  tests/init_test.cc
+  tests/list_test.cc
+  tests/iterator_test.cc
+  tests/reference_test.cc)
 
 target_link_libraries(
   playground_test
