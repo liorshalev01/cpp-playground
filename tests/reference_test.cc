@@ -48,13 +48,22 @@ TEST(ReferenceTest, Ctor) {
   auto class_a = ClassA();
 };
 
-TEST(ReferenceTest, CopyCtor) {
+TEST(ReferenceTest, CopyCtor1) {
+  auto class_a2 = ClassA(ClassA());
+};
+
+TEST(ReferenceTest, CopyCtor2) {
   auto class_a1 = ClassA();
   auto class_a2 = ClassA(class_a1);
 };
 
-TEST(ReferenceTest, MoveCtor) {
+TEST(ReferenceTest, MoveCtor1) {
   auto class_a2 = ClassA(ClassA());
+};
+
+TEST(ReferenceTest, MoveCtor2) {
+  auto class_a1 = ClassA();
+  auto class_a2 = ClassA(std::move(class_a1));
 };
 
 TEST(ReferenceTest, CopyAssignment) {
@@ -64,8 +73,8 @@ TEST(ReferenceTest, CopyAssignment) {
 };
 
 TEST(ReferenceTest, MoveAssignment) {
-  auto class_a1 = ClassA();
-  auto class_a2 = ClassA();
+  auto class_a1 = ClassA{};
+  auto class_a2 = ClassA{};
   class_a2 = std::move(class_a1);
 };
 
