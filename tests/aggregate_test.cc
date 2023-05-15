@@ -4,15 +4,6 @@
 #include <vector>
 
 struct Aggregate {
-  Aggregate() = default;
-  ~Aggregate() = default;
-
-  Aggregate(const Aggregate&) = default;
-  Aggregate& operator=(const Aggregate&) = default;
-
-  Aggregate(Aggregate&&) = default;
-  Aggregate& operator=(Aggregate&&) = default;
-
   int a{};
   std::string b{};
   std::vector<std::string> c{};
