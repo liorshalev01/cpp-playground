@@ -9,6 +9,8 @@ add_executable(
   playground
   src/main.cc)
 
+target_precompile_headers(playground PRIVATE pch.h)
+
 add_executable(
   playground_test
   tests/class_test.cc
@@ -18,9 +20,12 @@ add_executable(
   tests/reference_test.cc
   tests/aggregate_test.cc)
 
+target_precompile_headers(playground_test PRIVATE pch.h)
+
 target_link_libraries(
   playground_test
   GTest::gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(playground_test)
+
