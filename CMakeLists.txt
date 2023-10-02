@@ -18,7 +18,8 @@ add_executable(
   tests/list_test.cc
   tests/iterator_test.cc
   tests/reference_test.cc
-  tests/aggregate_test.cc)
+  tests/aggregate_test.cc
+  tests/ranges_test.cc)
 
 target_precompile_headers(playground_test PRIVATE pch.h)
 
