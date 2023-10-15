@@ -1,8 +1,5 @@
 #include <gtest/gtest.h>
 
-#include <list>
-#include <string>
-
 namespace {
 
 class A {

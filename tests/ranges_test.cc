@@ -10,6 +10,6 @@ TEST(RangesTest, StringIncludesTest) {
 }
 
 TEST(RangesTest, AnyOfTest) {
-  const auto v1 = std::vector{std::string{"Error: App loading"}};
-  EXPECT_TRUE(std::ranges::any_of(v1, [](const auto& s) { return s.find("App2") != std::string::npos; }));
+  const auto v1 = std::vector{std::string{"abcd"}};
+  EXPECT_TRUE(std::ranges::any_of(v1, [](const auto& s) { return s.find("cd") != std::string::npos; }));
 }

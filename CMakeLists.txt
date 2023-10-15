@@ -12,21 +12,21 @@ add_executable(
 target_precompile_headers(playground PRIVATE pch.h)
 
 add_executable(
-  playground_test
+  playground_tests
   tests/class_test.cc
   tests/init_test.cc
   tests/list_test.cc
   tests/iterator_test.cc
   tests/reference_test.cc
   tests/aggregate_test.cc
-  tests/ranges_test.cc)
+  tests/ranges_test.cc
+  tests/getuid_test.cc)
 
-target_precompile_headers(playground_test PRIVATE pch.h)
+target_precompile_headers(playground_tests PRIVATE pch.h)
 
 target_link_libraries(
-  playground_test
+  playground_tests
   GTest::gtest_main)
 
 include(GoogleTest)
-gtest_discover_tests(playground_test)
-
+gtest_discover_tests(playground_tests)

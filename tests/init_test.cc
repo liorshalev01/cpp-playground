@@ -1,8 +1,5 @@
 #include <gtest/gtest.h>
 
-#include <list>
-#include <string>
-
 class A {
  public:
   explicit A(int value) : value_(value) {
