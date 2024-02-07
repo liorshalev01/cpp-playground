@@ -20,7 +20,8 @@ add_executable(
   tests/reference_test.cc
   tests/aggregate_test.cc
   tests/ranges_test.cc
-  tests/getuid_test.cc)
+  tests/getuid_test.cc
+  tests/transform_test.cc)
 
 target_precompile_headers(playground_tests PRIVATE pch.h)
 
