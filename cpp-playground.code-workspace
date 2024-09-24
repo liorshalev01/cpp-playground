@@ -7,50 +7,7 @@
   "settings": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true,
+      "source.organizeImports": "explicit"
     },
-    "C_Cpp.intelliSenseEngine": "disabled",
-    "editor.tokenColorCustomizations": {
-      "[*Light*]": {
-        "textMateRules": [
-          {
-            "scope": "ref.matchtext",
-            "settings": {
-              "foreground": "#000"
-            }
-          }
-        ]
-      },
-      "[*Dark*]": {
-        "textMateRules": [
-          {
-            "scope": "ref.matchtext",
-            "settings": {
-              "foreground": "#fff"
-            }
-          }
-        ]
-      },
-      "textMateRules": [
-        {
-          "scope": "googletest.failed",
-          "settings": {
-            "foreground": "#f00"
-          }
-        },
-        {
-          "scope": "googletest.passed",
-          "settings": {
-            "foreground": "#0f0"
-          }
-        },
-        {
-          "scope": "googletest.run",
-          "settings": {
-            "foreground": "#0f0"
-          }
-        }
-      ]
-    },
-  },
+  }
 }
