@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.25)
-project(playground)
 
+project(playground)
 set(CMAKE_CXX_STANDARD 20)
 
+include(CTest)
 include(cmake/googletest.cmake)
 
 add_executable(
